@@ -7,19 +7,21 @@ import {
   Container,
 } from '@chakra-ui/react';
 
+import { profile } from '~/profileData';
+
 export default function Profile() {
   return (
     <Container maxW='container.sm'>
       <VStack spacing={8}>
         <AspectRatio ratio={1} w='150px'>
           <Image
-            alt='fizzyelt'
+            alt={profile.name}
             borderRadius='full'
-            src='https://avatars.githubusercontent.com/u/43887006?v=4'
+            src={profile.avatarLink}
           />
         </AspectRatio>
-        <Heading size='lg'>FizzyElt</Heading>
-        <Text>description</Text>
+        <Heading size='lg'>{profile.name}</Heading>
+        <Text>{profile.description}</Text>
       </VStack>
     </Container>
   );
