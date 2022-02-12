@@ -16,7 +16,6 @@ import {
 import PageContainer from '~/containers/PageContainer';
 
 export default function PostPage(props) {
-  console.log(props);
   return (
     <PageContainer>
       <Container maxW='container.lg' py={10}>
