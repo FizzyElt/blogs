@@ -4,6 +4,7 @@ const basePath = process.env.NODE_ENV === 'production' ? '/blogs' : '';
 
 module.exports = {
   reactStrictMode: true,
+  basePath,
   assetPrefix: `${basePath}/`,
   webpack: (config, { isServer }) => {
     if (!isServer) {
