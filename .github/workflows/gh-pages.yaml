@@ -1,0 +1,39 @@
+name: Deploy to Github Pages
+
+on:
+  push:
+    branches:
+      - blogs
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+
+    steps:
+      - name: Get files
+        uses: actions/checkout@v2
+      - name: use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+      - name: use pnpm
+        uses: pnpm/action-setup@v2.1.0
+        with:
+          version: 6.0.2
+      - name: Install packages
+        run: pnpm install
+      - name: Build project
+        run: pnpm run build
+      - name: Export static files
+        run: pnpm run export
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@v4.2.3
+        with:
+          branch: gh-pages
+          folder: out
