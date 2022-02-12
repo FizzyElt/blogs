@@ -1,7 +1,9 @@
 name: Deploy to Github Pages
 
 on:
-  push: branches:[nextjs-blogs]
+  push:
+    branches:
+      - nextjs-blogs
 
 jobs:
   build: runs-on:ubuntu-latest
