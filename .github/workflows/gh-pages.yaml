@@ -31,7 +31,7 @@ jobs:
       - name: Export static files
         run: pnpm run export
       - name: Add .nojekll file
-        run: touch ./out/.nojekll
+        run: touch ./.nojekll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
