@@ -1,5 +1,5 @@
-const colors={
-    primary:''
-}
+const colors = {
+  primary: '',
+};
 
-export default colors
+export default colors;

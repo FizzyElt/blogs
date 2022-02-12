@@ -9,7 +9,7 @@ import {
   Link,
 } from '@chakra-ui/react';
 
-import { IoLogoTwitter, IoLogoGithub, IoMail } from 'react-icons/io5';
+import { IoMail } from 'react-icons/io5';
 
 import { footer } from '~/profileData';
 
