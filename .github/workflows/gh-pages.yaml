@@ -21,11 +21,11 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: Install packages
-        run: pnpm ci
+        run: npm ci
       - name: Build project
-        run: pnpm run build
+        run: npm run build
       - name: Export static files
-        run: pnpm run export
+        run: npm run export
       - name: Add .nojekll file
         run: touch ./out/.nojekll
       - name: Deploy
