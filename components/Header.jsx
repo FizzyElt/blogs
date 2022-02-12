@@ -10,7 +10,11 @@ import {
   Link,
 } from '@chakra-ui/react';
 
+import NextLink from 'next/link';
+
 import { IoLogoGithub } from 'react-icons/io5';
+
+import { header } from '~/profileData';
 
 export default function Header() {
   return (
@@ -18,14 +22,12 @@ export default function Header() {
       <Container maxW='container.lg'>
         <Flex py={4} align='center'>
           <HStack>
-            <Avatar
-              size='sm'
-              src='https://avatars.githubusercontent.com/u/43887006?v=4'
-              name='FizzyElt'
-            />
-            <Text fontSize='lg' fontWeight='bold'>
-              FizzyElt
-            </Text>
+            <Avatar size='sm' src={header.avatarLink} name={header.name} />
+            <NextLink href='/'>
+              <Text fontSize='lg' fontWeight='bold'>
+                {header.name}
+              </Text>
+            </NextLink>
           </HStack>
 
           <Spacer />
