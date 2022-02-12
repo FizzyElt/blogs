@@ -30,8 +30,8 @@ jobs:
         run: pnpm run build
       - name: Export static files
         run: pnpm run export
-      - name: Add .nojekll file
-        run: touch ./.nojekll
+      - name: Add .nojekyll file
+        run: touch ./out/.nojekyll
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4.2.3
         with:
