@@ -1,26 +1,28 @@
 import { IoLogoGithub, IoLogoTwitter } from 'react-icons/io5';
 
 export const header = {
-  name: 'FizzyElt',
-  avatarLink: 'https://avatars.githubusercontent.com/u/43887006?v=4',
+  name: 'Name',
+  avatarLink:
+    'https://cdn.pixabay.com/photo/2022/01/16/15/03/finch-6942278_960_720.jpg',
 };
 
 export const footer = {
-  email: 'fizzyelt8786@gmail.com',
+  email: 'xxxxx@gmail.com',
   socialLink: [
     {
-      link: 'https://github.com/FizzyElt',
+      link: '',
       icon: IoLogoGithub,
     },
     {
-      link: 'https://twitter.com/FizzyElt',
+      link: '',
       icon: IoLogoTwitter,
     },
   ],
 };
 
 export const profile = {
-  name: 'FizzyElt',
-  avatarLink: 'https://avatars.githubusercontent.com/u/43887006?v=4',
-  description: '',
+  name: 'Name',
+  avatarLink:
+    'https://cdn.pixabay.com/photo/2022/01/16/15/03/finch-6942278_960_720.jpg',
+  description: 'description',
 };
