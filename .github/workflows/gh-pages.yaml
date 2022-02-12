@@ -25,11 +25,11 @@ jobs:
         with:
           version: 6.0.2
       - name: Install packages
-        run: npm ci
+        run: pnpm ci
       - name: Build project
-        run: npm run build
+        run: pnpm run build
       - name: Export static files
-        run: npm run export
+        run: pnpm run export
       - name: Add .nojekll file
         run: touch ./out/.nojekll
       - name: Deploy
