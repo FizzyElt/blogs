@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Nextjs / chakra-UI blogs
 
-## Getting Started
+- Nextjs
+- Chakra-UI
+- remark
+- github actions
 
-First, run the development server:
+使用 Nextjs 配合 Chakra-UI 建立簡易部落格，利用 github action 部屬在 github pages 上。
 
-```bash
-npm run dev
-# or
-yarn dev
+--- 
+
+### 客製化樣式
+自訂樣式要先了解 Chakra-UI 樣式規則（[這裡](https://chakra-ui.com/docs/theming/customize-theme)），可修改包含主題色、組件樣式、RWD等等，取決於你多了解 Chakra-UI 整個系統。
+
+### 編輯個人資訊
+如果你想編輯個人資訊，你可在 `profileData.js` 檔案內修改
+，包含Header、Footer、主頁個人資訊
+
+
+```js
+import { IoLogoGithub, IoLogoTwitter } from 'react-icons/io5';
+
+export const header = {
+  name: 'Name',
+  avatarLink:
+    'https://cdn.pixabay.com/photo/2022/01/16/15/03/finch-6942278_960_720.jpg',
+};
+
+export const footer = {
+  email: 'xxxxx@gmail.com',
+  socialLink: [
+    {
+      link: '',
+      icon: IoLogoGithub,
+    },
+    {
+      link: '',
+      icon: IoLogoTwitter,
+    },
+  ],
+};
+
+export const profile = {
+  name: 'Name',
+  avatarLink:
+    'https://cdn.pixabay.com/photo/2022/01/16/15/03/finch-6942278_960_720.jpg',
+  description: 'description',
+};
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Deployment
+部屬前請先開一個 **gh-pages** 的分支（分支內容必須為全空），然後在 `.github/workflows/gh-pages.yaml` 寫上要在哪個分支更新自動部屬（預設為 **blogs**）
+```yaml
+on:
+  push:
+    branches:
+      - blogs
+```
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Next Config
+如果你的 github repo 名稱不叫 blogs，請把 `next.config.js` 的 `basePath` **blogs** 換成你的 repo 名稱
+```js
+const basePath = process.env.NODE_ENV === 'production' ? '/{{Your repo name}}' : '';
+```
