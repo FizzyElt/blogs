@@ -1,4 +1,4 @@
-import 'github-markdown-css';
+import 'github-markdown-css/github-markdown-dark.css';
 import 'highlight.js/styles/atom-one-dark.css';
 import { getPostData, getAllPostsId } from '~/lib/post';
 
