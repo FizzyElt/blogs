@@ -5,12 +5,16 @@ import PageContainer from '~/containers/PageContainer';
 
 import Profile from '~/components/Profile';
 import PostCard from '~/components/PostCard';
+import GAScript from '~/components/GAScript';
 
 import Head from 'next/head';
+import Script from 'next/script';
 
 import { profile } from '~/profileData';
 
 export default function Home({ posts = [] }) {
+  console.log(process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID);
+
   return (
     <>
       <Head>
@@ -46,6 +50,7 @@ export default function Home({ posts = [] }) {
           </VStack>
         </Container>
       </PageContainer>
+      <GAScript />
     </>
   );
 }

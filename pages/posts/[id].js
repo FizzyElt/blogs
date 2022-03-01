@@ -15,7 +15,7 @@ import {
 import PageContainer from '~/containers/PageContainer';
 
 import Head from 'next/head';
-
+import GAScript from '~/components/GAScript';
 import { profile } from '~/profileData';
 
 export default function PostPage(props) {
@@ -34,7 +34,11 @@ export default function PostPage(props) {
             <Heading>{props.postData.title}</Heading>
             <HStack>
               {props.postData.tags.map((tag, index) => (
-                <Tag key={index} variant='outline' color='yellow.300'>
+                <Tag
+                  key={`${tag}_${index}`}
+                  variant='outline'
+                  color='yellow.300'
+                >
                   {tag}
                 </Tag>
               ))}
@@ -50,6 +54,7 @@ export default function PostPage(props) {
           />
         </Container>
       </PageContainer>
+      <GAScript />
     </>
   );
 }
