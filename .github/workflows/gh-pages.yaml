@@ -16,6 +16,8 @@ jobs:
     steps:
       - name: Get files
         uses: actions/checkout@v2
+        env:
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
       - name: use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v2
         with:
