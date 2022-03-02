@@ -27,6 +27,8 @@ jobs:
       - name: Install packages
         run: pnpm install
       - name: Build project
+        env:
+          NEXT_PUBLIC_GOOGLE_ANALYTICS_ID: ${{ secrets.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID }}
         run: pnpm run build
       - name: Export static files
         run: pnpm run export
