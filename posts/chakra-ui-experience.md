@@ -1,5 +1,6 @@
 ---
 title: Chakra-UI 使用心得與學習要點
+time: 2022/03/02
 description: 描述 Chakra-UI 的使用心得以及它好在哪，我們可以從中得到什麼啟發
 tags: Chakra-UI,UI-framework
 ---
