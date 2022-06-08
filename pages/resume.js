@@ -212,6 +212,8 @@ export default function Resume() {
                     <SimpleGrid columns={2}>
                       <Text color="gray.600">git</Text>
                       <Text color="gray.600">VSCode</Text>
+                      <Text color="gray.600">Mac OS</Text>
+                      <Text color="gray.600">Linux(Ubuntu)</Text>
                     </SimpleGrid>
                     <Text color="gray.800" fontSize="lg">
                       語言
