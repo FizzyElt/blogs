@@ -1,3 +1,4 @@
+import { Button } from '@chakra-ui/react';
 import {
   Box,
   Container,
@@ -18,6 +19,7 @@ import {
 } from '@chakra-ui/react';
 
 import Head from 'next/head';
+import Script from 'next/script';
 
 import { IoLogoGithub, IoMailOpenOutline } from 'react-icons/io5';
 
@@ -34,7 +36,7 @@ export default function Resume() {
       </Head>
 
       <Box bgColor="white">
-        <Container maxW="container.md" py={10}>
+        <Container id="resume" maxW="container.md" py={4}>
           <Flex>
             <Heading size="md" color="black">
               FizzyElt
@@ -63,7 +65,9 @@ export default function Resume() {
 
           <Center my={4} px={4}>
             <Text color="black" textAlign="center">
-              接觸前端約四年，喜歡從工具找想法，從想法找靈感，對新事物抱持開放態度，近期以拓展知識廣度及研究撰寫乾淨整潔程式碼的方法為主。
+              接觸前端約四年，喜歡從工具找想法，從想法找靈感，對新事物抱持開放態度 ，<br />
+              近期以學習 <b>Rust</b> 拓展知識廣度及研究 <b>Functional Programming</b>{' '}
+              來撰寫乾淨整潔的程式碼為主。
             </Text>
           </Center>
 
@@ -86,19 +90,44 @@ export default function Resume() {
                     <Box pl={4}>
                       <UnorderedList>
                         <ListItem fontSize="md">
-                          使用 Typescript 開發及設計前端專案架構，目前約有 6 ~ 7 個。
+                          使用 <b>Typescript</b> 開發及設計前端專案架構
                         </ListItem>
                         <ListItem fontSize="md">
-                          導入 Chakra-UI 及 recoil 到公司專案中，建立專案樣式規範。
+                          導入 <b>Chakra-UI</b> 及 <b>recoil</b> 到公司專案中，建立專案樣式規範。
                         </ListItem>
                         <ListItem fontSize="md">設計可共用前端組件，減少重複程式碼。</ListItem>
                         <ListItem fontSize="md">
-                          協助設計師建立基本設計規範，以利於前端開發，減少心智負擔。
+                          協助 UI 設計師建立基本設計規範，以利於前端開發。
                         </ListItem>
                         <ListItem fontSize="md">引導實習生完成前端頁面及功能。</ListItem>
-                        <ListItem fontSize="md">與後端討論資料結構及 API 設計</ListItem>
-                        <ListItem fontSize="md">解答及修正前端各類問題</ListItem>
-                        <ListItem fontSize="md">code review</ListItem>
+                        <ListItem fontSize="md">與後端討論資料結構及 API 設計。</ListItem>
+                        <ListItem fontSize="md">code review，維持程式碼品質</ListItem>
+                      </UnorderedList>
+                      <Text color="teal.700" fontSize="lg" fontWeight="bold">
+                        專案
+                      </Text>
+                      <UnorderedList>
+                        <ListItem fontSize="md">
+                          <Text color="green.500" fontWeight="bold">
+                            misseco 餐飲平台
+                          </Text>
+                          平台包含使用者端、平台管理後台、店家管理後台，負責設計前端頁面及功能，大部分沿用
+                          <b>VO2 舒氧</b> 平台前端組件。
+                        </ListItem>
+                        <ListItem fontSize="md">
+                          <Text color="green.500" fontWeight="bold">
+                            VO2 舒氧 餐飲平台
+                          </Text>
+                          平台包含使用者端、平台管理後台、店家管理後台，負責設計前端頁面及功能，同時設計
+                          <b>misseco</b> 專案可共用組件。
+                        </ListItem>
+                        <ListItem fontSize="md">
+                          <Text color="green.500" fontWeight="bold">
+                            weserve 餐飲外送平台使用者端翻新
+                          </Text>
+                          使用者端網站改版，使用 <b>Chakra-UI</b> 重新製作頁面組件，<b>recoil</b>{' '}
+                          管理全域狀態。
+                        </ListItem>
                       </UnorderedList>
                     </Box>
                   </VStack>
@@ -219,7 +248,7 @@ export default function Resume() {
                       語言
                     </Text>
                     <Text color="gray.600">中文（母語）</Text>
-                    <Text color="gray.600">英文（文字訊息）</Text>
+                    <Text color="gray.600">英文（閱讀）</Text>
                   </VStack>
                 </Box>
               </VStack>
