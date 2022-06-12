@@ -39,7 +39,7 @@ export default function Resume() {
         <Container id="resume" maxW="container.md" py={4}>
           <Flex>
             <Heading size="md" color="black">
-              FizzyElt
+              索柏銓
             </Heading>
             <Spacer />
             <VStack align="stretch">
@@ -73,7 +73,7 @@ export default function Resume() {
 
           <Flex>
             <Box flex="1">
-              <VStack align="stretch" spacing={10}>
+              <VStack align="stretch" spacing={6}>
                 <Box>
                   <Text color="black" fontSize="2xl" fontWeight="bold">
                     經歷
@@ -81,7 +81,7 @@ export default function Resume() {
                   <VStack align="flex-start">
                     <HStack align="flex-end">
                       <Text color="black" fontSize="xl">
-                        Stark Tech
+                        Stark Tech 鷹翔有限公司
                       </Text>
                       <Text color="gray.500" fontSize="md">
                         2020.10 ~ now
@@ -111,22 +111,27 @@ export default function Resume() {
                           <Text color="green.500" fontWeight="bold">
                             misseco 餐飲平台
                           </Text>
-                          平台包含使用者端、平台管理後台、店家管理後台，負責設計前端頁面及功能，大部分沿用
-                          <b>VO2 舒氧</b> 平台前端組件。
+                          負責設計使用者網站、平台管理後台、店家管理後台，使用
+                          <b>Typescript、React、Chakra-UI、recoil</b> 開發，沿用{' '}
+                          <b>VO-2 舒氧 餐飲平台</b> 約 70％ 的組件。
                         </ListItem>
                         <ListItem fontSize="md">
                           <Text color="green.500" fontWeight="bold">
                             VO2 舒氧 餐飲平台
                           </Text>
-                          平台包含使用者端、平台管理後台、店家管理後台，負責設計前端頁面及功能，同時設計
-                          <b>misseco</b> 專案可共用組件。
+                          負責設計使用者網站、平台管理後台、店家管理後台，使用{' '}
+                          <b>Typescript、React、Chakra-UI、recoil</b> 開發，同時規劃跟設計{' '}
+                          <b>misseco 餐飲平台</b>可共用組件，利用 <b>react-hook-form</b>{' '}
+                          控制複雜表單。
                         </ListItem>
                         <ListItem fontSize="md">
                           <Text color="green.500" fontWeight="bold">
                             weserve 餐飲外送平台使用者端翻新
                           </Text>
-                          使用者端網站改版，使用 <b>Chakra-UI</b> 重新製作頁面組件，<b>recoil</b>{' '}
-                          管理全域狀態。
+                          翻新舊版使用者網站，使用 <b>Typescript</b> 開發，導入{' '}
+                          <b>Chakra-UI、recoil</b>
+                          作為公司主要技術棧，與 UI
+                          設計師建立基礎樣式規範，減少反覆確認樣式細節的時間。
                         </ListItem>
                       </UnorderedList>
                     </Box>
@@ -152,7 +157,7 @@ export default function Resume() {
             <Box px={2} />
 
             <Box flex="1">
-              <VStack align="stretch" spacing={10}>
+              <VStack align="stretch" spacing={6}>
                 <Box>
                   <Text color="black" fontSize="2xl" fontWeight="bold">
                     個人作品
