@@ -2,15 +2,7 @@ import 'github-markdown-css/github-markdown-dark.css';
 import 'highlight.js/styles/atom-one-dark.css';
 import { getPostData, getAllPostsId } from '~/lib/post';
 
-import {
-  Box,
-  Container,
-  Tag,
-  Heading,
-  Text,
-  HStack,
-  VStack,
-} from '@chakra-ui/react';
+import { Box, Container, Tag, Heading, Text, HStack, VStack } from '@chakra-ui/react';
 
 import PageContainer from '~/containers/PageContainer';
 
@@ -23,33 +15,35 @@ export default function PostPage(props) {
     <>
       <Head>
         <title>{props.postData.title}</title>
-        <meta name='author' content={profile.name} />
-        <meta name='description' content={props.postData.description} />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name="author" content={profile.name} />
+        <meta name="description" content={props.postData.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="og:title" content={props.postData.title} />
+        <meta name="og:description" content={props.postData.description} />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="zh-tw" />
+        <meta name="og:site_name" content={profile.name} />
       </Head>
 
       <PageContainer>
-        <Container maxW='container.lg' py={10}>
-          <VStack align='stretch' mb={10}>
+        <Container maxW="container.lg" py={10}>
+          <VStack align="stretch" mb={10}>
             <Heading>{props.postData.title}</Heading>
             <HStack>
               {props.postData.tags.map((tag, index) => (
-                <Tag
-                  key={`${tag}_${index}`}
-                  variant='outline'
-                  color='yellow.300'
-                >
+                <Tag key={`${tag}_${index}`} variant="outline" color="yellow.300">
                   {tag}
                 </Tag>
               ))}
             </HStack>
-            <Text color='gray.400' fontWeight='bold'>
+            <Text color="gray.400" fontWeight="bold">
               {props.postData.editTime}
             </Text>
           </VStack>
           <Box
-            className='markdown-body'
-            bgColor='transparent'
+            className="markdown-body"
+            bgColor="transparent"
             dangerouslySetInnerHTML={{ __html: props.postData.contentHtml }}
           />
         </Container>

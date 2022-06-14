@@ -33,6 +33,11 @@ export default function Resume() {
         <meta name="author" content={profile.name} />
         <meta name="description" content={profile.description} />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="og:title" content={`${profile.name} resume`} />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="zh-tw" />
+        <meta name="og:site_name" content={profile.name} />
       </Head>
 
       <Box bgColor="white">
@@ -111,7 +116,7 @@ export default function Resume() {
                           <Text color="green.500" fontWeight="bold">
                             misseco 餐飲平台
                           </Text>
-                          負責設計使用者網站、平台管理後台、店家管理後台，使用
+                          與實習生共同協作，負責設計使用者網站、平台管理後台及店家管理後台專案架構跟路由設計，使用
                           <b>Typescript、React、Chakra-UI、recoil</b> 開發，沿用{' '}
                           <b>VO-2 舒氧 餐飲平台</b> 約 70％ 的組件。
                         </ListItem>
@@ -119,10 +124,10 @@ export default function Resume() {
                           <Text color="green.500" fontWeight="bold">
                             VO2 舒氧 餐飲平台
                           </Text>
-                          負責設計使用者網站、平台管理後台、店家管理後台，使用{' '}
-                          <b>Typescript、React、Chakra-UI、recoil</b> 開發，同時規劃跟設計{' '}
-                          <b>misseco 餐飲平台</b>可共用組件，利用 <b>react-hook-form</b>{' '}
-                          控制複雜表單。
+                          與實習生共同協作，負責設計使用者網站、平台管理後台及店家管理後台專案架構跟路由設計，使用{' '}
+                          <b>Typescript、React、Chakra-UI、recoil</b> 開發，同時與 UI
+                          設計師討論跟設計 <b>misseco 餐飲平台</b>可共用組件，利用{' '}
+                          <b>react-hook-form</b> 控制複雜表單。
                         </ListItem>
                         <ListItem fontSize="md">
                           <Text color="green.500" fontWeight="bold">
