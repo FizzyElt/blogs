@@ -19,24 +19,25 @@ export default function Home({ posts = [] }) {
     <>
       <Head>
         <title>{profile.name} blogs</title>
-        <meta name='author' content={profile.name} />
-        <meta name='description' content={profile.description} />
-        <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+        <meta name="author" content={profile.name} />
+        <meta name="description" content={profile.description} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <meta name="og:title" content={`${profile.name} blogs`} />
+        <meta name="og:description" content={profile.description} />
+        <meta name="og:type" content="website" />
+        <meta name="og:locale" content="zh-tw" />
+        <meta name="og:site_name" content={profile.name} />
       </Head>
 
       <PageContainer hideHeader>
-        <Box bgColor='teal.600'>
-          <Container maxW='container.sm' py={10}>
+        <Box bgColor="teal.600">
+          <Container maxW="container.sm" py={10}>
             <Profile />
           </Container>
         </Box>
-        <Container m='auto' maxW='container.sm' py={8}>
-          <VStack
-            align='stretch'
-            maxW='container.sm'
-            spacing={5}
-            divider={<StackDivider />}
-          >
+        <Container m="auto" maxW="container.sm" py={8}>
+          <VStack align="stretch" maxW="container.sm" spacing={5} divider={<StackDivider />}>
             {posts.map(({ id, title, description, tags, editTime }) => (
               <PostCard
                 key={id}
